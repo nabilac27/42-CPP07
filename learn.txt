@@ -1,3 +1,35 @@
 ex00
 
 https://www.geeksforgeeks.org/cpp/templates-cpp/
+
+--
+
+What is a template?
+
+A template is a blueprint.
+
+Instead of writing the same function for int, double, string, etc., you write one function, and the compiler creates the correct version.
+
+Without templates:
+
+void print(int x);
+void print(double x);
+void print(std::string x);
+
+Three almost identical functions.
+
+With a template:
+
+template <typename T>
+void print(T x);
+
+Now the compiler creates:
+
+print(5);          // T becomes int
+print(3.14);       // T becomes double
+print("Hello");    // T becomes const char*
+
+
+--
+
+"A template is a blueprint. T is a placeholder for the array element type, and Func is a placeholder for the function type. When I call iter with an int array, the compiler generates an int version. When I call it with a std::string array, it generates a std::string version. Inside iter, I loop through the array and call the function on each element."
