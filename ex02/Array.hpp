@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/28 14:16:01 by nchairun          #+#    #+#             */
-/*   Updated: 2026/07/12 03:14:20 by nchairun         ###   ########.fr       */
+/*   Updated: 2026/07/12 21:43:53 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,28 @@
 # include <iostream>   
 
 template <typename T>
-class Array {
-	
+class Array 
+{
+	private:
+		T*				_array;
+		unsigned int	_size;
+
+	public:
+		Array();
+		Array(unsigned int num);
+		Array(const Array&  other);
+		Array&  operator=(const Array&  other);
+
+		~Array();
+
+		T&          operator[](unsigned int index);
+		const T&    operator[](unsigned int index) const;
+
+		unsigned int	size(void) const;
 };
+
 #endif
+
+/*
+    Make own templated array class that behaves a little like std::vector, except its size never changes.
+*/
