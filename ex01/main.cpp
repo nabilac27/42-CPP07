@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/28 14:15:51 by nchairun          #+#    #+#             */
-/*   Updated: 2026/07/12 01:02:33 by nchairun         ###   ########.fr       */
+/*   Updated: 2026/07/16 19:04:30 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void printArray(const T &value)
 
 int main()
 {
-    int numbers[] = {1, 2, 3, 4, 5};
-    std::string words[] = {"Hello", "World", "1"};
+    int numbers[] = {0, 1, 2, 3, 4};
+    std::string words[] = {"Hello", "World", "42"};
 
     iter(numbers, 5, printArray<int>);
     std::cout << std::endl;

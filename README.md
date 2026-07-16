@@ -34,5 +34,22 @@ Each exercise focuses on a different application of templates:
 
 ---
 
+## Concepts Learned
+
+<details>
+<summary>Templates</summary>
+
+---
+
+Templates allow one function or class to work with different data types without rewriting the same logic.
+
+```cpp
+template <typename T>
+void	print(T value)
+{
+	std::cout << value << std::endl;
+}
+---
+
 ## Resources
 - https://www.geeksforgeeks.org/cpp/templates-cpp/
